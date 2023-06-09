@@ -3,6 +3,7 @@
 
 # 使用教程
 1. main.c
+```
 #include "Debug.h"
 #include "Uart_Variable_Length.h"
 
@@ -14,7 +15,9 @@ int main(void)
     HAL_Delay(1);  
   }
 }
+```
 2. stm32f1xx_it.c
+```
 #include "Uart_Variable_Length.h"
 
 void USART1_IRQHandler(void)
@@ -23,3 +26,4 @@ void USART1_IRQHandler(void)
   /*<处理空闲中断>*/
   Idle_Interrupt_Process(&huart1);
 }
+```
